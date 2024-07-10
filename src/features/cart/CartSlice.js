@@ -19,7 +19,7 @@ const cartSlice = createSlice({
       // Mahsulotni mavjudligini tekshirish
       const existingProduct = state.cartItems.find((item) => item.customID === product.customID);
     
-      // Agar mahsulot mavjud bo'lsa, miqdorni ko'paytirish
+      // Agar mahsulot mavjud bo'lsa, miqdorni oshirish
       if (existingProduct) {
         existingProduct.amount += product.amount;
       } else {

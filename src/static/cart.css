@@ -1,4 +1,4 @@
-.button {
+/* .button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -52,4 +52,77 @@
     opacity: 1;
     transform: translateY(30px);
     transition-duration: .3s;
+  } */
+/* 
+  .home {
+    background-image: url("https://m.media-amazon.com/images/I/6110jJxyUSL._AC_UF1000,1000_QL80_.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
   }
+   */
+
+
+  .button {
+    background-color: #ff4040;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .button:hover {
+    background-color: ;
+  }
+  
+  .btn {
+    background-color: #8707ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btnaka:hover {
+    background-color: #6605cc;
+  }
+  
+  .search {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search button:hover {
+    background-color: #218838;
+  }
+  
+  .svgIcon {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+  

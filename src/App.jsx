@@ -56,10 +56,10 @@ export default function App() {
           index: true,
           element: <Home />,
         },
-        // {
-        //   path: "/cart",
-        //   element: <Cart />,
-        // },
+        {
+          path: "/cart",
+          element: <Cart />,
+        },
         {
           path: "/create",
           element: <Create />,

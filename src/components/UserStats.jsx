@@ -25,9 +25,8 @@ const date = creationTime.split(", ")[1].split(" ")[0] + " " + creationTime.spli
               ></path>
             </svg>
           </div>
-          <div className="stat-title">food </div>
+          <div className="stat-title">Food </div>
           <div className="stat-value text-primary">{date}</div>
-          
         </div>
 
         <div className="stat">

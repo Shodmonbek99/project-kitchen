@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FcNext } from "react-icons/fc";
+import { GrLinkNext } from "react-icons/gr";
 
 
 const ImagesContainer = ({product}) => {
@@ -11,7 +11,7 @@ const ImagesContainer = ({product}) => {
     setIsOpen(true);
   };
 
-  const closeModal = () => {
+  const Modal = () => {
     setIsOpen(false);
   };
 
@@ -48,7 +48,7 @@ const ImagesContainer = ({product}) => {
           <div className="relative p-8 rounded  w-full max-w-2xl">
             <button
               className="absolute top-2 right-2 text-2xl font-bold text-gray-600 hover:text-gray-800"
-              onClick={closeModal}
+              onClick={Modal}
             >
               <span className='hover:text-orange-600 font-bold transition-all duration-300 text-white'>x</span>
             </button>
@@ -59,7 +59,7 @@ const ImagesContainer = ({product}) => {
                   onClick={handlePrev}
                 >
                     <div className='rounded-full bg-white w-14 h-14 flex items-center justify-center rotate-180'>
-                    <FcNext />
+                    <grNext />
 
                     </div>
                 </button>
@@ -73,7 +73,7 @@ const ImagesContainer = ({product}) => {
                   onClick={handleNext}
                 >
                   <div className='rounded-full bg-white w-14 h-14 flex items-center justify-center '>
-                    <FcNext />
+                    <GrLinkNext />
 
                     </div>
                 </button>

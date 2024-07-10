@@ -1,0 +1,20 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4a5568; /* Example background color */
+    color: #cbd5e0; /* Example text color */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer a {
+    color: #cbd5e0; /* Example link color */
+  }
+  
+  .footer a:hover {
+    color: #ffffff; /* Example hover link color */
+  }
+  
