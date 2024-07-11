@@ -2,16 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore";
 
-
-
 const firebaseConfig = {
-  apiKey: "AIzaSyCM264pU2Tduyf3VJeaxlvYYCTKR0AZxVU",
-  authDomain: "unwantet-eda.firebaseapp.com",
-  projectId: "unwantet-eda",
-  storageBucket: "unwantet-eda.appspot.com",
-  messagingSenderId: "508355805699",
-  appId: "1:508355805699:web:d60911430e84f7a9f18436"
+  apiKey: "AIzaSyBrEtyBLd2bdsEo5Fi4gH2ejhPXC__keCU",
+  authDomain: "exam-efc49.firebaseapp.com",
+  projectId: "exam-efc49",
+  storageBucket: "exam-efc49.appspot.com",
+  messagingSenderId: "251626869035",
+  appId: "1:251626869035:web:6f756edddaa8e2a58df56e"
 };
+
 
 const app = initializeApp(firebaseConfig);
 
