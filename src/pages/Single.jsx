@@ -1,6 +1,7 @@
 // src/pages/Single.js
-
-import React, { useState } from "react";
+"use client";
+import React from "react";
+import  { useState } from "react";
 import { useDispatch } from "react-redux";
 import ProductCard from "../components/ProductCard";
 import { addItem } from "../features/cart/CartSlice";

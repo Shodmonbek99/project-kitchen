@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+"use client";
+import React from "react";
+import  { useState, useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
 
 const BarChart = ({ cockingTimes, names }) => {

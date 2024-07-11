@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React from "react";
 import "../static/card.css";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig";
@@ -80,7 +81,7 @@ const Card = ({ product }) => {
             <span className="regular-text">Cooking Time</span>
           </div>
           <div className="item">
-            <span className="big-text">$ {product.price}</span>
+            <span className="big-text">💲 {product.price}</span>
             <span className="regular-text">Price</span>
           </div>
         </div>

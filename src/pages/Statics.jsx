@@ -1,4 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+"use client";
+import React from "react";
+import  { useContext, useEffect, useState } from "react";
 import { useCollection } from "../hooks/useCollection";
 import BarChart from "../components/BarChart";
 import BarChartCus from "../components/BarChartRev";
@@ -28,7 +30,7 @@ export default function Statics() {
 
     return (
         <div className="flex flex-col max-w-[1400px] mx-auto mt-20 gap-10">
-            <h1 className="text-5xl font-bold text-center text-accent">About User </h1>
+            <h1 className="text-5xl font-bold text-center text-primary">About User </h1>
             <UserStats user={user} />
             <h1 className="text-5xl font-bold text-center text-warning">Statics of Foods </h1>
             <div className="">

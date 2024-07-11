@@ -1,5 +1,4 @@
-// src/components/CartItems.js
-
+"use client";
 import React from "react";
 
 const CartItems = ({ cartItems }) => {

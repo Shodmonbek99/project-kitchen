@@ -1,4 +1,6 @@
-import React, { useState,useContext } from "react";
+"use client";
+import React from "react";
+import  { useState,useContext } from "react";
 import "../static/create.css";
 import toast, { Toaster } from "react-hot-toast";
 import { collection, addDoc } from "firebase/firestore";

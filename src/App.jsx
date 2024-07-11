@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 // router dom
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
