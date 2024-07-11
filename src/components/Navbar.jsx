@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <header className="header-area">
-      <div className="navbar top-0 left-0 right-0 z-50 bg-inherit shadow-lg border-none px-10">
+      <div className="navbar top-0 left-0 right-0 z-50 bg-gray-200 shadow-lg border-none px-10">
         <div className="navbar-start gap-4">
           <div className="dropdown flex items-center gap-5">
             <label tabIndex="0" className="btn btn-ghost btn-circle">
@@ -344,13 +344,13 @@ const Navbar = () => {
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">{user.displayName}</a>
+                <a className="btn btn-outline p-top-2px justify-between">{user.displayName}</a>
               </li>
               <li>
-                <a>Settings</a>
+                <a className="btn btn-outline p-bottom-2px btn-success">Settings</a>
               </li>
               <li>
-                <a onClick={signOutFunc}>Logout</a>
+                <a className="btn btn-outline p-top-2px btn-primary" onClick={signOutFunc}>Logout</a>
               </li>
             </ul>
           </div>
