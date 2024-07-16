@@ -63,7 +63,7 @@
   }
    */
 
-
+/* 
   .button {
     background-color: #ff4040;
     color: white;
@@ -124,5 +124,83 @@
     fill: white;
     width: 24px;
     height: 24px;
+  }
+   */
+
+   .button {
+    background-color: #ff4040;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .button:hover {
+    background-color: #e60000;
+  }
+  
+  .btn {
+    background-color: #8707ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #6605cc;
+  }
+  
+  .search {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search button:hover {
+    background-color: #218838;
+  }
+  
+  .svgIcon {
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Adjust spacing between cards */
+  .flex-card {
+    margin-bottom: 20px; /* Add margin between cards */
+  }
+  
+  @media (max-width: 768px) {
+    .flex-card {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   

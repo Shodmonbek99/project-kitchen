@@ -52,7 +52,7 @@ const ProductCard = ({ product }) => {
       </div>
       <button 
         onClick={goBack} 
-        className="mt-10 btn btn-active btn-accent text-white py-2 px-4 rounded "
+        className=" btn btn-active btn-accent mt-10 text-white py-2 px-4 rounded "
       >
         Back
       </button>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/useContextGlobal";
@@ -9,12 +9,25 @@ import { auth } from "../firebase/firebaseConfig";
 import toast, { Toaster } from "react-hot-toast";
 import "../static/button.css";
 import { FaShopify } from "react-icons/fa6";
+import Weather from "./Weather";
 
 import {
   clearCart,
   editItem,
   updateFromLocalStorage,
 } from "../features/cart/CartSlice";
+
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+
+const themes = {
+  winter: "winter",
+  dracula: "dracula",
+};
+
+function themeFormLocalStorage() {
+  const storedTheme = localStorage.getItem("theme");
+  return storedTheme in themes ? storedTheme : themes.winter;
+}
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -26,6 +39,22 @@ const Navbar = () => {
   useEffect(() => {
     toast.success(`Welcome ${user.displayName}`);
   }, []);
+
+  const [currentTheme, setCurrentTheme] = useState(themeFormLocalStorage());
+  const [isDarkMode, setIsDarkMode] = useState(currentTheme === themes.dracula);
+
+  const handleMode = () => {
+    setCurrentTheme((prev) => {
+      const newTheme = prev === themes.winter ? themes.dracula : themes.winter;
+      setIsDarkMode(newTheme === themes.dracula);
+      return newTheme;
+    });
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    localStorage.setItem("theme", currentTheme);
+  }, [currentTheme]);
 
   useEffect(() => {
     dispatch(updateFromLocalStorage());
@@ -221,6 +250,17 @@ const Navbar = () => {
                 {numItemsInCart}
               </span>
             </button>
+            <label className="swap swap-rotate">
+            <input
+              type="checkbox"
+              className="theme-controller"
+              value="dark"
+              checked={isDarkMode}
+              onChange={handleMode}
+            />
+            <MdOutlineLightMode size={30} className="swap-off fill-current w-7 h-7 text-yellow-200 bg-white rounded-3xl" />
+            <MdOutlineDarkMode size={30} className="swap-on text-white bg-slate-500 rounded-3xl fill-current w-7 h-7" />
+          </label>
           </div>
           <dialog id="my_modal_2" className="modal">
             <div className="modal-box max-w-[377px]">

@@ -1,42 +1,43 @@
-// "use client";
-// import React from "react";
-// // src/components/Weather.js
-// import { useState, useEffect } from 'react';
-// import axios from 'axios';
+// Weather.js
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { MdLocationOn } from 'react-icons/md';
 
-// const Weather = () => {
-//   const [weather, setWeather] = useState(null);
-//   const API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
-//   const CITY = 'YOUR_CITY';
+const Weather = ({ latitude, longitude }) => {
+  const [weatherData, setWeatherData] = useState(null);
 
-//   useEffect(() => {
-//     const fetchWeather = async () => {
-//       try {
-//         const response = await axios.get(
-//           `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`
-//         );
-//         setWeather(response.data);
-//       } catch (error) {
-//         console.error('Error fetching weather data:', error);
-//       }
-//     };
+  useEffect(() => {
+    if (latitude && longitude) {
+      axios
+        .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=YOUR_API_KEY`)
+        .then((response) => {
+          setWeatherData(response.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching weather data:', error);
+        });
+    }
+  }, [latitude, longitude]);
 
-//     fetchWeather();
-//   }, []);
+  if (!weatherData) {
+    return (
+      <div className="flex items-center">
+        <MdLocationOn size={24} className="mr-2 text-gray-500" />
+        <div>Loading weather...</div>
+      </div>
+    );
+  }
 
-//   return (
-//     <div className="weather-info">
-//       {weather ? (
-//         <div>
-//           <p>{weather.name}</p>
-//           <p>{weather.main.temp}°C</p>
-//           <p>{weather.weather[0].description}</p>
-//         </div>
-//       ) : (
-//         <p>Loading...</p>
-//       )}
-//     </div>
-//   );
-// };
+  return (
+    <div className="flex flex-col items-center">
+      <div className="flex items-center">
+        <MdLocationOn size={24} className="mr-2 text-gray-500" />
+        <p>{weatherData.name}</p>
+      </div>
+      <p>{weatherData.weather[0].description}</p>
+      <p>{Math.round(weatherData.main.temp - 273.15)}°C</p>
+    </div>
+  );
+};
 
-// export default Weather;
+export default Weather;
